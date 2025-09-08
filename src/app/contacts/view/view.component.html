@@ -1,6 +1,7 @@
 <div *ngIf="contact; else loading">
   <h2>{{ contact.firstname }} {{ contact.lastname }}</h2>
   <p>{{ contact.street }} {{ contact.city }}</p>
+  <a routerLink="/contacts/{{ contact.id }}/edit" class="view">Edit</a>
 </div>
 
 <ng-template #loading>
