@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 import { Contact } from 'src/app/models/contact';
 import { ContactsService } from '../contacts.service';
@@ -23,7 +23,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactId = Number(this.route.snapshot.paramMap.get('id'));
-    this.contactService.GetBeerById(this.contactId).subscribe((data) => {
+    this.contactService.GetContactById(this.contactId).subscribe((data) => {
       this.contact = data!;
     });
   }

@@ -13,8 +13,15 @@ export class ContactsService {
   public AddContact(contact: Contact): void {
     this.contacts.push(contact);
   }
+  
+  public EditContact(updatedContact: Contact): void {
+    const index = this.contacts.findIndex(c => c.id === updatedContact.id);
+    if (index !== -1) {
+      this.contacts[index] = updatedContact;
+    }
+  }
 
-  GetBeerById(id: number): Observable<Contact | undefined> {
+  GetContactById(id: number): Observable<Contact | undefined> {
     const contact = this.contacts.find((c) => c.id === id);
     return of(contact);
   }
