@@ -2,7 +2,7 @@
 <div *ngFor="let contact of contacts; let isLast = last">
   <div class="contact">
       <p class="name">{{ contact.firstname }} {{contact.lastname}}</p>
-      <p class="view">View</p>
+      <a routerLink="/contacts/{{ contact.id }}" class="view">View</a>
   </div>
   <hr *ngIf="!isLast">
 </div>

@@ -1,1 +1,8 @@
-<p>view works!</p>
+<div *ngIf="contact; else loading">
+  <h2>{{ contact.firstname }} {{ contact.lastname }}</h2>
+  <p>{{ contact.street }} {{ contact.city }}</p>
+</div>
+
+<ng-template #loading>
+  <p>Loading contact details...</p>
+</ng-template>

@@ -9,7 +9,7 @@ import { ContactsModule } from './contacts/contacts.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, ContactsModule, LayoutModule],
+  imports: [BrowserModule, AppRoutingModule, ContactsModule, LayoutModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
