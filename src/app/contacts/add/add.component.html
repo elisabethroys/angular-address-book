@@ -1,1 +1,48 @@
-<p>add works!</p>
+<div>
+  <h2>Add Contact</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="addContact()" class="form-group">
+    <div>
+      <label for="firstname" class="form-control">First Name: </label>
+      <input
+        type="text"
+        id="firstname"
+        formControlName="firstname"
+        class="form-control"
+      />
+    </div>
+    <br>
+    <div>
+      <label for="lastname" class="form-control">Last Name: </label>
+      <input
+        type="text"
+        id="lastname"
+        formControlName="lastname"
+        class="form-control"
+      />
+    </div>
+    <br>
+    <div>
+      <label for="street" class="form-control">Street: </label>
+      <input
+        type="text"
+        id="street"
+        formControlName="street"
+        class="form-control"
+      />
+    </div>
+    <br>
+    <div>
+      <label for="city" class="form-control">City: </label>
+      <input
+        type="text"
+        id="city"
+        formControlName="city"
+        class="form-control"
+      />
+    </div>
+    <br>
+    <button type="submit" [disabled]="contactForm.invalid" class="btn btn-success">
+      Add Contact
+    </button>
+  </form>
+</div>
